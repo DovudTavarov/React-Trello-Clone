@@ -54,6 +54,7 @@
   background-color: #e4e1e1;
   width: 60%;
   outline: none;
+  color: black;
 }
 .card-cont {
   display: flex;
