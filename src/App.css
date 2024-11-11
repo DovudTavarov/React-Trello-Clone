@@ -83,6 +83,8 @@
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+  width: 100vw;
+  overflow-x: hidden;
   padding-bottom: 500px;
   background-color: rgb(60, 101, 196);
 }
