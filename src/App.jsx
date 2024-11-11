@@ -3,8 +3,15 @@ import DoneIcon from "@mui/icons-material/Done";
 import "./App.css";
 import Box from "./component/Box";
 
+const updateLocalStorage = (list) => {
+  localStorage.setItem("trelloList", JSON.stringify(list));
+};
+
 const App = () => {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(() => {
+    const savedList = localStorage.getItem("trelloList");
+    return savedList ? JSON.parse(savedList) : [];
+  });
   const [editListId, setEditListId] = useState(null);
   const [listInputVal, setListInputVal] = useState("");
   const [draggedEl, setDraggedEl] = useState(null);
@@ -13,14 +20,14 @@ const App = () => {
   const [editId, setEditId] = useState(null);
 
   useEffect(() => {
-    setCard(list.cards);
-  }, [list.cards]);
-
-  useEffect(() => {
     if (editListId || listInputVal.trim() === "") {
       inputRef.current?.focus();
     }
   }, [editListId, listInputVal]);
+
+  useEffect(() => {
+    updateLocalStorage(list);
+  }, [list]);
 
   const onDragStopped = (dropId) => {
     const updatedList = list.map((l) => {
