@@ -49,11 +49,13 @@
 .card {
   flex: 1;
   text-align: left;
-  border: solid 1px lightgray;
-  border-radius: 10px 0 0 10px;
-  padding: 9px 20px;
+  font-size: 16px;
+  padding: 8px;
+  width: 180px;
+  border-radius: 0;
   background-color: #e4e1e1;
   outline: none;
+  border: none;
 }
 .card:disabled {
   color: black;
@@ -63,6 +65,10 @@
   display: flex;
   align-items: center;
   margin: 10px;
+  border: solid 1px lightgray;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #e4e1e1;
 }
 .add_list {
   background-color: #184f7f;

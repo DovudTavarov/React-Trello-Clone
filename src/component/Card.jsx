@@ -44,7 +44,10 @@ export default function ({
           sx={{
             backgroundColor: "#9E9E9E",
             color: "white",
-            padding: "5px",
+            padding: "8px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             cursor: "pointer",
           }}
         />
@@ -53,7 +56,10 @@ export default function ({
           sx={{
             backgroundColor: "green",
             color: "white",
-            padding: "5px",
+            padding: "8px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             cursor: "pointer",
           }}
           onClick={() => handleSaveIdChange()}
@@ -64,8 +70,11 @@ export default function ({
         sx={{
           backgroundColor: "red",
           color: "white",
-          padding: "5px",
-          borderRadius: "0 10px 10px 0",
+          padding: "8px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: "0 8px 8px 0",
           cursor: "pointer",
         }}
       />
